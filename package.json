@@ -1,0 +1,20 @@
+{
+  "name": "ibriz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run start-backend & npm run start-frontend",
+    "start-backend": "cd backend && node server.js",
+    "start-frontend": "cd frontend && npm start",
+    "test": "npm run backend-test & npm run frontend-test",
+    "backend-test": "cd backend && npm test",
+    "frontend-test": "cd frontend && npm test",
+    "install": "npm install --prefix frontend && npm install --prefix backend",
+    "frontend": "cd frontend",
+    "backend": "cd backend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

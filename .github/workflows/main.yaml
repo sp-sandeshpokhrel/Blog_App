@@ -1,0 +1,21 @@
+name: Build and Test
+on: [push]
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup NodeJs
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16.x"
+      - name: Install server dependencies
+        working-directory: ./backend
+        run: yarn install
+      - name: Install Client dependencies
+        working-directory: ./frontend
+        run: yarn install
+      - name: Backend test
+        working-directory: ./backend
+        run: yarn run test
