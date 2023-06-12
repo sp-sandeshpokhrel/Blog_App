@@ -39,8 +39,7 @@ This will start the backend server and the frontend development server. You can 
 
 For this project, no external state management library like Redux has been used. Since it is a simple project, the state management is handled within the components using React's built-in state capabilities.
 
-## Feedback
+## Improvements
 
-Please note that the feedback functionality has not been implemented in the frontend component of this app, even though all errors are caught and handled by the backend. This is a deliberate design choice for this particular project.
+Please note that the feedback functionality has not been implemented in the frontend component of this app, even though all errors are caught and handled by the backend. This is a deliberate design choice for this particular project based on time requirements.
 
-Feel free to explore and modify the code to add the desired feedback functionality if needed.
