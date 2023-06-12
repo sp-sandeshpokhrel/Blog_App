@@ -15,9 +15,12 @@ export default function Feed() {
   }, []);
 
   return (
-    <section className="feed">
+    <div className="flex flex-wrap justify-center">
       {data.map((blog) => (
-        <div key={blog._id} className="blog_layout">
+        <div
+          key={blog._id}
+          className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-4"
+        >
           <a href={`/blogs/${blog._id}`}>
             <Blog
               title={blog.title}
@@ -29,6 +32,22 @@ export default function Feed() {
           </a>
         </div>
       ))}
-    </section>
+    </div>
+
+    // <section className="feed">
+    //   {data.map((blog) => (
+    //     <div key={blog._id} className="blog_layout">
+    //       <a href={`/blogs/${blog._id}`}>
+    //         <Blog
+    //           title={blog.title}
+    //           content={blog.content}
+    //           image={blog.image}
+    //           tags={blog.tags}
+    //           user={blog.user}
+    //         />
+    //       </a>
+    //     </div>
+    //   ))}
+    // </section>
   );
 }
