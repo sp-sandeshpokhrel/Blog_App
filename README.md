@@ -27,6 +27,8 @@ The tests for the backend are written using Jest, while the tests for the fronte
 
 ## Running the App
 
+Firstly create .env file in backend/ folder and add the following environment variables as given in .env.example file. Also change value of ENDPOINT in frontend/src/utils/constants.js to the URL of the backend server.
+
 To start the app, use the following command:
 
 `npm run start`
