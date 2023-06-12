@@ -41,5 +41,5 @@ For this project, no external state management library like Redux has been used.
 
 ## Improvements
 
-Please note that the feedback functionality has not been implemented in the frontend component of this app, even though all errors are caught and handled by the backend. This is a deliberate design choice for this particular project based on time requirements.
+Frontend can be improved to look better and also please note that the feedback functionality has not been implemented in the frontend component of this app, even though all errors are caught and handled by the backend. This is a deliberate design choice for this particular project based on time requirements.
 
