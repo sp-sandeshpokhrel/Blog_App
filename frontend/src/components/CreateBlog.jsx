@@ -3,6 +3,7 @@ import FormBlog from "./BlogForm";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Cookies from "universal-cookie";
+import { ENDPOINT } from "../utils/constants";
 
 const CreateBlog = () => {
   const [title, setTitle] = useState("");
@@ -24,7 +25,7 @@ const CreateBlog = () => {
     // Prepare the blog data for API call
     const configuration = {
       method: "POST",
-      url: "http://localhost:8000/api/blogs/create",
+      url: `${ENDPOINT}/api/blogs/create`,
       data: {
         title,
         tags: tags.split(",").map((tag) => tag.trim()),

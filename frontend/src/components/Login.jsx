@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Cookies from "universal-cookie";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { ENDPOINT } from "../utils/constants";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -36,7 +37,7 @@ const Login = () => {
       // Call the login endpoint
       const configuration = {
         method: "POST",
-        url: "http://localhost:8000/api/users/login",
+        url: `${ENDPOINT}/api/users/login`,
         data: {
           email,
           password,

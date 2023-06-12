@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Cookies from "universal-cookie";
 import { useNavigate } from "react-router-dom";
+import { ENDPOINT } from "../utils/constants";
 
 const EditBlog = () => {
   const params = useParams();
@@ -18,7 +19,7 @@ const EditBlog = () => {
   useEffect(() => {
     const configuration = {
       method: "GET",
-      url: `http://localhost:8000/api/blogs/blogs/${params.blogId}`,
+      url: `${ENDPOINT}/api/blogs/blogs/${params.blogId}`,
     };
     axios(configuration)
       .then((res) => {

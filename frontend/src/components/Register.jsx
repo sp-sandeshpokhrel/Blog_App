@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { ENDPOINT } from "../utils/constants";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -43,7 +44,7 @@ const Register = () => {
     if (validateForm()) {
       const configuration = {
         method: "post",
-        url: `http://localhost:8000/api/users/register`,
+        url: `${ENDPOINT}/api/users/register`,
         data: {
           email,
           password,

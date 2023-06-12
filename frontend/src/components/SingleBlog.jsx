@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Cookies from "universal-cookie";
+import { ENDPOINT } from "../utils/constants";
 
 const BlogPage = () => {
   const params = useParams();
@@ -13,7 +14,7 @@ const BlogPage = () => {
   useEffect(() => {
     const configuration = {
       method: "GET",
-      url: `http://localhost:8000/api/blogs/blogs/${params.blogId}`,
+      url: `${ENDPOINT}/api/blogs/blogs/${params.blogId}`,
     };
     axios(configuration)
       .then((res) => {

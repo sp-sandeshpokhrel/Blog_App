@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Cookies from "universal-cookie";
 import Blog from "./Blog";
+import { ENDPOINT } from "../utils/constants";
 
 export default function Profile() {
   const cookies = new Cookies();
@@ -14,7 +15,7 @@ export default function Profile() {
       headers: {
         Authorization: `Bearer ${token}`,
       },
-      url: `http://localhost:8000/api/blogs/user/${id}`,
+      url: `${ENDPOINT}/api/blogs/user/${id}`,
     };
     axios(configuration)
       .then((res) => {

@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import Blog from "./Blog";
 import axios from "axios";
+import { ENDPOINT } from "../utils/constants";
 
 export default function Feed() {
   const [data, setData] = useState([]);
   useEffect(() => {
     const configuration = {
       method: "GET",
-      url: "http://localhost:8000/api/blogs",
+      url: `${ENDPOINT}/api/blogs`,
     };
     axios(configuration).then((res) => {
       setData(res.data.blogs);
